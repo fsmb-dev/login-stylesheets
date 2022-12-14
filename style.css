@@ -46,14 +46,13 @@
       .heading h1,
       #api .intro, #api .entry .entry-item label,
       #api .entry .rememberMe,
-      .helpLink,
-      .error.itemLevel {
+      .helpLink {
 				display: none !important;
 			}
 
 			#api form .entry .entry-item {
         position: relative;
-        padding: 0px 0px 35px 0px;
+        padding: 0px 0px 32px 0px;
 			}
 
 			#api form .error {
@@ -67,7 +66,7 @@
 
       #api form ul li label {
         margin-bottom: 5px;
-        display: block;
+        display: none;
       }
 
 			#api form .entry .entry-item input, #api form ul .attrEntry input {
@@ -79,7 +78,7 @@
 
       #api form ul .attrEntry input {
         display: block;
-        margin: 8px 0 16px 0;
+        margin: 16px 0;
       }
 
 			#api form .entry .entry-item u {
@@ -102,7 +101,6 @@
 
       #api form .buttons button {
         display: block;
-        margin: 10px 0;
         background: black;
         color: white;
         width: 100%;
@@ -119,4 +117,17 @@
       #emailVerificationControl_error_message[aria-hidden="false"] {
         margin: 16px 0;
         display: block !important;
+      }
+
+      .helpLink {
+        display: none;
+      }
+
+      #api form .buttons .verifyCode {
+        width: 60%;
+        margin-right: 2.5%;
+      }
+      
+      #api form .buttons .sendNewCode {
+        width:37.5%;
       }
