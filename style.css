@@ -7,14 +7,48 @@
       /**
         Tailwind classes that are used on this page.
       */
-      .bg-center {background-position: center;}.bg-cover {background-size: cover;}.flex {display: flex;}.flex-col {flex-direction: column;}.font-bold {font-weight: 700;}.font-light {font-weight: 300;}.h-64 {height: 16rem;}.inline-block {display: inline-block;}.justify-between {justify-content: space-between;}.min-h-screen {min-height: 100vh;}.mb-6 {margin-bottom: 1.5rem;}.mb-2 {margin-bottom: 0.5rem;}.mr-1 {margin-right: 0.25rem;}.mt-12 {margin-top: 3rem;}.mt-4 {margin-top: 1rem;}.mt-6 {margin-top: 1.5rem;}.p-8 {padding: 2rem;}.text-center {text-align: center;}.text-3xl {font-size: 1.875rem;line-height: 2.25rem;}.text-gray-400 {--tw-text-opacity: 1;color: rgb(156 163 175 / var(--tw-text-opacity));}.text-sm {font-size: 0.875rem;line-height: 1.25rem;}.underline {-webkit-text-decoration-line: underline;text-decoration-line: underline;}.w-48 {width: 12rem;}.w-full {width: 100%;}@media (min-width: 1024px) {.lg\:flex {display: flex;}.lg\:flex-row {flex-direction: row;}.lg\:h-auto {height: auto;}.lg\:mt-0 {margin-top: 0px;}.lg\:p-24 {padding: 6rem;}.lg\:text-left {text-align: left;}.lg\:w-1\/2 {width: 50%;}}
+      .bg-center {background-position: center;}
+      .bg-cover {background-size: cover;}
+      .flex {display: flex;}
+      .flex-col {flex-direction: column;}
+      .font-bold {font-weight: 700;}
+      .font-light {font-weight: 300;}
+      .h-64 {height: 16rem;}
+      .inline-block {display: inline-block;}
+      .justify-between {justify-content: space-between;}
+      .min-h-screen {min-height: 100vh;}
+      .mb-12 {margin-bottom: 3rem;}
+      .mb-2 {margin-bottom: 0.5rem;}
+      .mr-1 {margin-right: 0.25rem;}
+      .mt-12 {margin-top: 3rem;}
+      .mt-4 {margin-top: 1rem;}
+      .mt-6 {margin-top: 1.5rem;}
+      .no-underline {text-decoration: none;}
+      .p-8 {padding: 2rem;}
+      .text-center {text-align: center;}
+      .text-3xl {font-size: 1.875rem;line-height: 2.25rem;}
+      .text-gray-400 {--tw-text-opacity: 1;color: rgb(156 163 175 / var(--tw-text-opacity));}
+      .text-sm {font-size: 0.875rem;line-height: 1.25rem;}
+      .underline {-webkit-text-decoration-line: underline;text-decoration-line: underline;}
+      .w-48 {width: 12rem;}
+      .w-full {width: 100%;}@media (min-width: 1024px) {.lg\:flex {display: flex;}
+      .lg\:flex-row {flex-direction: row;}
+      .lg\:h-auto {height: auto;}
+      .lg\:mt-0 {margin-top: 0px;}
+      .lg\:p-24 {padding: 6rem;}
+      .lg\:text-left {text-align: left;}
+      .lg\:w-1\/2 {width: 50%;}}
 
       body {
         font-family: 'Figtree', sans-serif;
       }
 
-      .heading h1 , #api .intro, #api .entry .entry-item label, #api .entry .rememberMe, .helpLink {
-				display: none;
+      .heading h1,
+      #api .intro, #api .entry .entry-item label,
+      #api .entry .rememberMe,
+      .helpLink,
+      .error.itemLevel {
+				display: none !important;
 			}
 
 			#api form .entry .entry-item {
@@ -22,7 +56,7 @@
         padding: 0px 0px 35px 0px;
 			}
 
-			#api form .entry .entry-item .error {
+			#api form .error {
         color: rgb(239 68 68);
         margin: 6px 0;
 			}
@@ -38,9 +72,11 @@
 
 			#api form .entry .entry-item input, #api form ul .attrEntry input {
         border: 1px solid #000;
-        border-radius: 3px;
-        padding: 9px;
+        border-radius: 4px;
+        padding: 15px;
         width: 100%;
+        display: block;
+        margin: 8px 0 16px 0;
 			}
 
 			#api form .entry .entry-item u {
@@ -49,9 +85,17 @@
         right: 0;
 			}
 
+      #api form .buttons #cancel {
+        display: none !important;
+      }
+
 			#api form .entry .buttons {
 			  margin-top: 50px;
 			}
+
+      #api form .buttons {
+        margin-bottom: 50px;
+      }
 
       #api form .buttons button {
         display: block;
@@ -60,5 +104,16 @@
         color: white;
         width: 100%;
         border-radius:4px;
-        padding: 11px
+        padding: 17.5px 5px;
 			}
+
+      .password-label u, #forgotPassword {
+        text-decoration: none;
+      }
+
+      #emailVerificationControl_info_message[aria-hidden="false"],
+      #emailVerificationControl_success_message[aria-hidden="false"],
+      #emailVerificationControl_error_message[aria-hidden="false"] {
+        margin: 16px 0;
+        display: block !important;
+      }
