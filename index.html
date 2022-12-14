@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Physician Data Center</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://raw.githubusercontent.com/fsmb-dev/login-stylesheets/main/style.css" rel="stylesheet" />
+    <style>
+      /* http://meyerweb.com/eric/tools/css/reset/ 
+        v2.0 | 20110126
+        License: none (public domain)
+      */
+      html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}body {line-height: 1;}ol, ul {list-style: none;}blockquote, q {quotes: none;}blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}a {color: #000;}button, input, optgroup, select, textarea {font-family: inherit;font-size: 100%;font-weight: inherit;line-height: inherit;color: inherit;margin: 0;padding: 0;}button {cursor: pointer;}*, ::after, ::before {box-sizing: border-box;border-width: 0;border-style: solid;border-color: #e5e7eb;}
+
+      /**
+        Tailwind classes that are used on this page.
+      */
+      .bg-center {background-position: center;}.bg-cover {background-size: cover;}.flex {display: flex;}.flex-col {flex-direction: column;}.font-bold {font-weight: 700;}.font-light {font-weight: 300;}.h-64 {height: 16rem;}.inline-block {display: inline-block;}.justify-between {justify-content: space-between;}.min-h-screen {min-height: 100vh;}.mb-6 {margin-bottom: 1.5rem;}.mb-2 {margin-bottom: 0.5rem;}.mr-1 {margin-right: 0.25rem;}.mt-12 {margin-top: 3rem;}.mt-4 {margin-top: 1rem;}.mt-6 {margin-top: 1.5rem;}.p-8 {padding: 2rem;}.text-center {text-align: center;}.text-3xl {font-size: 1.875rem;line-height: 2.25rem;}.text-gray-400 {--tw-text-opacity: 1;color: rgb(156 163 175 / var(--tw-text-opacity));}.text-sm {font-size: 0.875rem;line-height: 1.25rem;}.underline {-webkit-text-decoration-line: underline;text-decoration-line: underline;}.w-48 {width: 12rem;}.w-full {width: 100%;}@media (min-width: 1024px) {.lg\:flex {display: flex;}.lg\:flex-row {flex-direction: row;}.lg\:h-auto {height: auto;}.lg\:mt-0 {margin-top: 0px;}.lg\:p-24 {padding: 6rem;}.lg\:text-left {text-align: left;}.lg\:w-1\/2 {width: 50%;}}
+    </style>
+    <style>
+      body {
+        font-family: 'Figtree', sans-serif;
+      }
+
+      .heading h1 , #api .intro, #api .entry .entry-item label, #api .entry .rememberMe, .helpLink {
+				display: none;
+			}
+
+			#api form .entry .entry-item {
+        position: relative;
+        padding: 0px 0px 35px 0px;
+			}
+
+			#api form .entry .entry-item .error {
+        color: rgb(239 68 68);
+        margin: 6px 0;
+			}
+
+      #api form ul li {
+        margin: 10px 0;
+      }
+
+      #api form ul li label {
+        margin-bottom: 5px;
+        display: block;
+      }
+
+			#api form .entry .entry-item input, #api form ul .attrEntry input {
+        border: 1px solid #000;
+        border-radius: 3px;
+        padding: 9px;
+        width: 100%;
+			}
+
+			#api form .entry .entry-item u {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+			}
+
+			#api form .entry .buttons {
+			  margin-top: 50px;
+			}
+
+      #api form .buttons button {
+        display: block;
+        margin: 10px 0;
+        background: black;
+        color: white;
+        width: 100%;
+        border-radius:4px;
+        padding: 11px
+			}
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen lg:flex lg:flex-row">
+      <div
+        class="w-full h-64 bg-center bg-cover lg:w-1/2 lg:h-auto"
+        style="
+          background-image: url('https://fsmbappstorlrshot.blob.core.windows.net/b2c/dev/pdc_login_banner.jpg');
+        "
+      ></div>
+      <div class="flex flex-col justify-between w-full p-8 lg:w-1/2 lg:p-24">
+        <div>
+          <svg
+            class="w-48"
+            version="1.1"
+            id="prefix__Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0"
+            y="0"
+            viewBox="0 0 424 112"
+            xml:space="preserve"
+          >
+            <style>
+              .prefix__st0 {
+                fill: #2d2e2c;
+              }
+              .prefix__st1 {
+                fill: #1a1919;
+              }
+              .prefix__st2 {
+                fill: #eb9130;
+              }
+              .prefix__st3 {
+                fill: #37a;
+              }
+            </style>
+            <g id="prefix__Design-_x5B_Updated_x2C_-9_x2F_11_x5D_">
+              <g id="prefix__Desktop-Homepage" transform="translate(-107 -112)">
+                <g id="prefix__MASTHEAD" transform="translate(-4 -1)">
+                  <g id="prefix__Group" transform="translate(111 113)">
+                    <g id="prefix__fsmb-logo-2-horizontal">
+                      <path
+                        id="prefix__Fill-1"
+                        class="prefix__st0"
+                        d="M173.9 32.7v2.7h4.7V38h-4.7v5H171V30h8v2.7h-5.1"
+                      />
+                      <path
+                        id="prefix__Fill-2"
+                        class="prefix__st0"
+                        d="M182 43V30h8.7v2.6H185v2.5h5.4v2.5H185v2.7h6V43h-9"
+                      />
+                      <path
+                        id="prefix__Fill-3"
+                        class="prefix__st0"
+                        d="M203.8 36.5c0-.7-.1-1.3-.4-1.8-.2-.5-.6-.9-.9-1.2-.4-.3-.8-.5-1.3-.6-.5-.1-1-.2-1.6-.2H198v7.6h1.5c.6 0 1.1-.1 1.6-.2s1-.3 1.4-.6c.4-.3.7-.7.9-1.2s.4-1.1.4-1.8zm3.2 0c0 1.1-.2 2.1-.6 2.9-.4.8-1 1.5-1.7 2s-1.5.9-2.3 1.2c-.9.3-1.7.4-2.6.4H195V30h4.6c.9 0 1.8.1 2.7.3.9.2 1.7.6 2.4 1.1.7.5 1.2 1.2 1.7 2 .4.8.6 1.8.6 3.1z"
+                      />
+                      <path
+                        id="prefix__Fill-4"
+                        class="prefix__st0"
+                        d="M210 43V30h8.7v2.6H213v2.5h5.4v2.5H213v2.7h6V43h-9"
+                      />
+                      <path
+                        id="prefix__Fill-5"
+                        class="prefix__st0"
+                        d="M228.4 34c0-.3-.1-.6-.2-.7-.1-.2-.3-.3-.5-.4-.2-.1-.4-.2-.6-.2-.2 0-.5-.1-.7-.1h-1.6v3h1.4c.2 0 .5 0 .7-.1.3 0 .5-.1.7-.2.2-.1.4-.3.5-.5.3-.2.3-.5.3-.8zm.1 9l-2.7-5.2h-1V43H222V30h4.7c.6 0 1.2.1 1.7.2.6.1 1.1.3 1.5.7.4.3.8.7 1.1 1.2.3.5.4 1.1.4 1.9 0 .9-.2 1.6-.7 2.2-.4.6-1.1 1-1.9 1.3L232 43h-3.5z"
+                      />
+                      <path
+                        id="prefix__Fill-6"
+                        class="prefix__st0"
+                        d="M241 33.5l-1.7 4.5h3.3l-1.6-4.5zm3.5 9.5l-1-2.6h-5.1l-1 2.6H234l5.5-13h3.1l5.4 13h-3.5z"
+                      />
+                      <path
+                        id="prefix__Fill-7"
+                        class="prefix__st0"
+                        d="M254.5 32.7V43h-3V32.7H248V30h10v2.7h-3.5"
+                      />
+                      <path
+                        id="prefix__Fill-8"
+                        class="prefix__st0"
+                        d="M261 43h3V30h-3z"
+                      />
+                      <path
+                        id="prefix__Fill-9"
+                        class="prefix__st0"
+                        d="M277.7 36.4c0-.5-.1-1-.3-1.5-.2-.5-.4-.9-.8-1.2-.3-.3-.7-.6-1.2-.8-.5-.2-1-.3-1.5-.3s-1 .1-1.5.3c-.4.2-.8.5-1.2.8-.3.3-.6.7-.8 1.2-.2.5-.3 1-.3 1.5 0 .6.1 1.1.3 1.5.2.5.4.9.8 1.2.3.3.7.6 1.2.8.4.2.9.3 1.5.3s1-.1 1.5-.3c.4-.2.8-.5 1.2-.8.3-.3.6-.7.8-1.2.2-.4.3-.9.3-1.5zm3.3 0c0 1-.2 1.9-.5 2.7-.4.8-.8 1.5-1.5 2.1-.6.6-1.4 1-2.2 1.3-.9.3-1.8.5-2.8.5-1 0-1.9-.2-2.8-.5-.9-.3-1.6-.8-2.2-1.3-.6-.6-1.1-1.3-1.5-2.1-.4-.8-.5-1.7-.5-2.7 0-1 .2-1.9.5-2.7.4-.8.8-1.5 1.5-2 .6-.6 1.4-1 2.2-1.3.9-.3 1.8-.5 2.8-.5 1 0 1.9.2 2.8.5.9.3 1.6.7 2.2 1.3.6.6 1.1 1.2 1.5 2 .3.9.5 1.8.5 2.7z"
+                      />
+                      <path
+                        id="prefix__Fill-10"
+                        class="prefix__st0"
+                        d="M292.4 43l-5.3-8.5h-.1l.1 8.5H284V30h3.6l5.3 8.5h.1l-.1-8.5h3.1v13h-3.6"
+                      />
+                      <path
+                        id="prefix__Fill-11"
+                        class="prefix__st0"
+                        d="M315.7 36.4c0-.5-.1-1-.3-1.5-.2-.5-.4-.9-.8-1.2-.3-.3-.7-.6-1.2-.8-.5-.2-1-.3-1.5-.3s-1 .1-1.5.3c-.4.2-.8.5-1.2.8-.3.3-.6.7-.8 1.2-.2.5-.3 1-.3 1.5 0 .6.1 1.1.3 1.5.2.5.4.9.8 1.2.3.3.7.6 1.2.8.4.2.9.3 1.5.3.5 0 1-.1 1.5-.3.4-.2.8-.5 1.2-.8.3-.3.6-.7.8-1.2.2-.4.3-.9.3-1.5zm3.3 0c0 1-.2 1.9-.5 2.7-.4.8-.8 1.5-1.5 2.1-.6.6-1.4 1-2.2 1.3-.9.3-1.8.5-2.8.5-1 0-1.9-.2-2.8-.5-.9-.3-1.6-.8-2.2-1.3-.6-.6-1.1-1.3-1.5-2.1-.4-.8-.5-1.7-.5-2.7 0-1 .2-1.9.5-2.7.4-.8.8-1.5 1.5-2 .6-.6 1.4-1 2.2-1.3.9-.3 1.8-.5 2.8-.5 1 0 1.9.2 2.8.5.9.3 1.6.7 2.2 1.3.6.6 1.1 1.2 1.5 2 .3.9.5 1.8.5 2.7z"
+                      />
+                      <path
+                        id="prefix__Fill-12"
+                        class="prefix__st0"
+                        d="M324.9 32.7v2.7h4.7V38h-4.7v5H322V30h8v2.7h-5.1"
+                      />
+                      <path
+                        id="prefix__Fill-13"
+                        class="prefix__st0"
+                        d="M174.4 65c-.5 0-1 0-1.5-.1s-1-.2-1.4-.4c-.5-.2-.9-.4-1.3-.6-.4-.2-.8-.5-1.1-.8l2.6-2.7c.3.3.7.6 1.2.8.5.2 1 .4 1.5.4.2 0 .5 0 .7-.1.2-.1.3-.2.3-.5 0-.1 0-.2-.1-.3-.1-.1-.2-.2-.4-.3-.2-.1-.4-.2-.7-.3-.3-.1-.7-.2-1.1-.4-.4-.1-.8-.3-1.2-.5-.4-.2-.7-.4-1.1-.7-.3-.3-.6-.6-.7-1-.2-.4-.3-.9-.3-1.4 0-.8.2-1.4.5-1.9s.7-1 1.3-1.3c.5-.3 1.1-.6 1.7-.7.6-.2 1.3-.2 1.9-.2.8 0 1.7.2 2.6.5.9.3 1.6.8 2.3 1.4l-2.7 2.6c-.3-.3-.6-.6-1.1-.8-.4-.2-.8-.3-1.1-.3-.3 0-.6 0-.8.1s-.3.2-.3.4.1.3.3.4c.2.1.5.2 1 .3.5.1.9.3 1.4.5.5.2 1 .4 1.4.7.4.3.8.7 1.1 1.1.3.4.4 1 .4 1.6 0 .7-.2 1.4-.5 1.9-.3.6-.7 1-1.2 1.4-.5.4-1.1.6-1.7.8-.6.3-1.3.4-1.9.4"
+                      />
+                      <path
+                        id="prefix__Fill-14"
+                        class="prefix__st0"
+                        d="M189.7 65h-4.4v-9.3H182V52h11v3.7h-3.3V65"
+                      />
+                      <path
+                        id="prefix__Fill-15"
+                        class="prefix__st0"
+                        d="M199.5 56.5l-1.1 3.2h2.1l-1-3.2zm-2.3-4.5h4.7l5.1 13h-4.8l-.7-1.9h-4.2l-.7 1.9H192l5.2-13z"
+                      />
+                      <path
+                        id="prefix__Fill-16"
+                        class="prefix__st0"
+                        d="M214.7 65h-4.4v-9.3H207V52h11v3.7h-3.3V65"
+                      />
+                      <path
+                        id="prefix__Fill-17"
+                        class="prefix__st0"
+                        d="M220 52h8.7v3.6H224v1.2h4.4v3.4H224v1.2h5V65h-9V52"
+                      />
+                      <path
+                        id="prefix__Fill-18"
+                        class="prefix__st0"
+                        d="M241.8 57.7l.3 7.3H238V52h5.7l2.3 7h.1l2-7h5.9v13h-4.2l.1-7.3h-.1l-2.4 7.3h-3.1l-2.4-7.3h-.1"
+                      />
+                      <path
+                        id="prefix__Fill-19"
+                        class="prefix__st0"
+                        d="M258 52h8.7v3.6H262v1.2h4.4v3.4H262v1.2h5V65h-9V52"
+                      />
+                      <path
+                        id="prefix__Fill-20"
+                        class="prefix__st0"
+                        d="M274 55.7v5.5h.8c1 0 1.7-.2 2.3-.7.5-.4.8-1.2.8-2.2 0-.8-.3-1.5-.8-2s-1.2-.7-2.1-.7h-1zm-4 9.3V52h4.6c1 0 1.9.1 2.8.3.9.2 1.7.6 2.4 1 .7.5 1.2 1.2 1.6 2 .4.8.6 1.9.6 3.1 0 1.1-.2 2.1-.6 3-.4.8-.9 1.5-1.6 2-.7.5-1.4.9-2.3 1.2-.8.3-1.7.4-2.7.4H270z"
+                      />
+                      <path
+                        id="prefix__Fill-21"
+                        class="prefix__st0"
+                        d="M285 65h4V52h-4z"
+                      />
+                      <path
+                        id="prefix__Fill-22"
+                        class="prefix__st0"
+                        d="M293 58.5c0-1 .2-1.9.5-2.7.4-.8.9-1.5 1.5-2.1.6-.6 1.4-1 2.2-1.3.9-.3 1.8-.5 2.7-.5 1 0 1.9.2 2.8.5.9.3 1.6.7 2.2 1.2l-2.6 3.1c-.2-.3-.5-.5-.9-.7-.4-.2-.8-.2-1.2-.2-.4 0-.7.1-1 .2-.3.1-.6.3-.8.5-.2.2-.4.5-.6.8-.1.3-.2.7-.2 1.1 0 .4.1.8.2 1.1.1.3.3.6.6.8.2.2.5.4.8.5.3.1.6.2 1 .2.5 0 .9-.1 1.3-.3.4-.2.6-.4.8-.7l2.6 3c-.6.6-1.3 1-2.1 1.3-.8.3-1.8.5-2.9.5-1 0-1.9-.2-2.7-.5s-1.6-.8-2.2-1.3c-.6-.6-1.1-1.3-1.5-2.1-.3-.5-.5-1.4-.5-2.4"
+                      />
+                      <path
+                        id="prefix__Fill-23"
+                        class="prefix__st0"
+                        d="M313.5 56.5l-1.1 3.2h2.1l-1-3.2zm-2.3-4.5h4.7l5.1 13h-4.8l-.7-1.9h-4.2l-.7 1.9H306l5.2-13z"
+                      />
+                      <path
+                        id="prefix__Fill-24"
+                        class="prefix__st0"
+                        d="M322 52h4.5v9.2h4.5V65h-9V52"
+                      />
+                      <path
+                        id="prefix__Fill-25"
+                        class="prefix__st0"
+                        d="M343.1 59.8v1.8h1.3c.3 0 .6-.1.8-.2.2-.2.3-.4.3-.7 0-.2 0-.3-.1-.4l-.3-.3c-.1-.1-.3-.1-.4-.1h-1.6zm0-4.4V57h1.2c.3 0 .6-.1.8-.2.2-.1.3-.4.3-.7 0-.2-.1-.4-.3-.6-.2-.1-.5-.2-.8-.2h-1.2zm4.4 2.8c.3.1.6.2.9.4.3.2.6.4.8.6.2.3.4.5.6.9.1.3.2.7.2 1.1 0 .7-.1 1.3-.4 1.8-.3.5-.7.9-1.1 1.2-.5.3-1 .5-1.6.6-.6.1-1.2.2-1.9.2h-6V52h5.4c.5 0 1.1 0 1.7.1.6.1 1.1.2 1.7.5.5.2.9.6 1.3 1 .3.5.5 1.1.5 1.8s-.2 1.3-.5 1.7c-.5.5-1 .9-1.6 1.1z"
+                      />
+                      <path
+                        id="prefix__Fill-26"
+                        class="prefix__st0"
+                        d="M356.5 58.4c0 .4.1.8.2 1.1s.3.6.5.9c.2.2.5.4.8.6.3.1.6.2 1 .2s.7-.1 1-.2c.3-.1.6-.3.8-.6.2-.2.4-.5.5-.9.1-.3.2-.7.2-1.1 0-.4-.1-.8-.2-1.1-.1-.3-.3-.6-.5-.8-.2-.2-.5-.4-.8-.5-.3-.1-.6-.2-1-.2s-.7.1-1 .2c-.3.1-.6.3-.8.5-.2.2-.4.5-.5.8-.1.4-.2.7-.2 1.1zm-4.5 0c0-1 .2-1.9.5-2.7.4-.8.8-1.5 1.5-2 .6-.6 1.4-1 2.2-1.3.9-.3 1.8-.5 2.8-.5 1 0 1.9.2 2.8.5.9.3 1.6.7 2.2 1.3.6.6 1.1 1.2 1.5 2 .4.8.5 1.7.5 2.7s-.2 1.9-.5 2.7c-.4.8-.8 1.5-1.5 2.1-.6.6-1.4 1-2.2 1.3-.9.3-1.8.5-2.8.5-1 0-1.9-.2-2.8-.5-.9-.3-1.6-.8-2.2-1.3-.6-.6-1.1-1.3-1.5-2.1-.3-.8-.5-1.7-.5-2.7z"
+                      />
+                      <path
+                        id="prefix__Fill-27"
+                        class="prefix__st0"
+                        d="M375.5 56.5l-1.1 3.2h2.1l-1-3.2zm-2.3-4.5h4.7l5.1 13h-4.8l-.7-1.9h-4.2l-.6 1.9H368l5.2-13z"
+                      />
+                      <path
+                        id="prefix__Fill-28"
+                        class="prefix__st0"
+                        d="M389.2 57.5h1.4c.2 0 .3-.1.5-.2s.3-.2.4-.3c.1-.1.2-.3.2-.6 0-.2 0-.4-.1-.6l-.3-.3c-.1-.1-.3-.1-.4-.1h-1.4v2.1zM385 52h5.7c.6 0 1.3.1 1.9.2.6.1 1.2.4 1.7.7.5.3.9.8 1.2 1.3.3.5.5 1.2.5 2s-.2 1.5-.6 2.1c-.4.6-1 1.1-1.7 1.4L397 65h-5.1l-2.5-4.6h-.1V65H385V52z"
+                      />
+                      <path
+                        id="prefix__Fill-29"
+                        class="prefix__st0"
+                        d="M403 55.7v5.5h.8c1 0 1.7-.2 2.3-.7.5-.4.8-1.2.8-2.2 0-.8-.3-1.5-.8-2s-1.2-.7-2.1-.7h-1zm-4 9.3V52h4.6c1 0 1.9.1 2.8.3s1.7.6 2.4 1c.7.5 1.2 1.2 1.6 2 .4.8.6 1.9.6 3.1 0 1.1-.2 2.1-.6 3-.4.8-.9 1.5-1.6 2-.7.5-1.4.9-2.3 1.2-.8.3-1.7.4-2.7.4H399z"
+                      />
+                      <path
+                        id="prefix__Fill-30"
+                        class="prefix__st0"
+                        d="M418.4 65c-.5 0-1 0-1.5-.1s-1-.2-1.4-.4c-.5-.2-.9-.4-1.3-.6-.4-.2-.8-.5-1.1-.8l2.6-2.7c.3.3.7.6 1.2.8.5.2 1 .4 1.5.4.2 0 .5 0 .7-.1.2-.1.3-.2.3-.5 0-.1 0-.2-.1-.3-.1-.1-.2-.2-.4-.3-.2-.1-.4-.2-.7-.3-.3-.1-.7-.2-1.1-.4-.4-.1-.8-.3-1.2-.5-.4-.2-.7-.4-1.1-.7-.3-.3-.6-.6-.7-1-.2-.4-.3-.9-.3-1.4 0-.8.2-1.4.5-1.9s.7-1 1.3-1.3c.5-.3 1.1-.6 1.7-.7.6-.2 1.3-.2 1.9-.2.8 0 1.7.2 2.6.5.9.3 1.6.8 2.3 1.4l-2.7 2.6c-.3-.3-.6-.6-1.1-.8-.4-.2-.8-.3-1.1-.3-.3 0-.6 0-.8.1-.2.1-.3.2-.3.4s.1.3.3.4c.2.1.5.2 1 .3.5.1.9.3 1.4.5.5.2 1 .4 1.4.7.4.3.8.7 1.1 1.1.3.4.4 1 .4 1.6 0 .7-.2 1.4-.5 1.9-.3.6-.7 1-1.2 1.4-.5.4-1.1.6-1.7.8-.6.3-1.3.4-1.9.4"
+                      />
+                      <path
+                        id="prefix__Fill-31"
+                        class="prefix__st1"
+                        d="M72.2 1c-.3 0-.3 0 0 0"
+                      />
+                      <path
+                        id="prefix__Fill-32"
+                        class="prefix__st2"
+                        d="M63 9c-4.5 7.5-4.6 8.6-7 18l2.5-1.9L63 9"
+                      />
+                      <path
+                        id="prefix__Fill-33"
+                        class="prefix__st1"
+                        d="M72 1"
+                      />
+                      <path
+                        id="prefix__Fill-34"
+                        class="prefix__st1"
+                        d="M72 1"
+                      />
+                      <path
+                        id="prefix__Fill-35"
+                        class="prefix__st1"
+                        d="M72 1"
+                      />
+                      <path
+                        id="prefix__Fill-36"
+                        class="prefix__st1"
+                        d="M72 1"
+                      />
+                      <path
+                        id="prefix__Fill-37"
+                        class="prefix__st1"
+                        d="M60 57v6h1c-.4-1.9-.7-4-1-6"
+                      />
+                      <path
+                        id="prefix__Fill-38"
+                        class="prefix__st2"
+                        d="M72.7.2s-.1 0 0 0c3.1.4 59.1 7.9 75.9 17.7-4.4 32.9-19.7 63.3-60.3 76-13.4-3.8-22.2-14.4-26.4-28.1H53c2.1 17.6 11.8 32.7 29.2 46.1 58-12.6 76-51 83.8-107.2C130.5 1 104.1-.7 72.7.2"
+                      />
+                      <path
+                        id="prefix__Fill-39"
+                        class="prefix__st3"
+                        d="M5.8 41.6H0v-7h5.8v-5c0-1.6.1-3 .4-4.4.3-1.4.8-2.6 1.6-3.7s1.9-1.9 3.4-2.5c1.5-.6 3.4-.9 5.8-.9.9 0 1.8 0 2.7.1.9.1 1.7.2 2.5.4l-.4 7.4c-.5-.2-1-.3-1.4-.4-.4-.1-.9-.1-1.5-.1-1.4 0-2.5.3-3.2.9-.7.6-1.1 1.8-1.1 3.7v4.5H26l-4.8 7h-6.5V63H5.8V41.6"
+                      />
+                      <path
+                        id="prefix__Fill-40"
+                        class="prefix__st3"
+                        d="M42.6 43.1c-1.3-1.6-2.9-2.4-5-2.4-.7 0-1.4.2-2.1.5-.7.4-1 1-1 1.8 0 .7.4 1.2 1.1 1.6.7.3 1.6.6 2.7.9 1.1.3 2.3.5 3.5.8 1.3.3 2.4.8 3.5 1.4 1.1.6 2 1.5 2.7 2.6.7 1.1 1.1 2.5 1.1 4.3 0 1.8-.4 3.4-1.2 4.6-.8 1.2-1.8 2.2-3 2.9-1.2.7-2.6 1.2-4.2 1.5-1.6.3-3.2.4-4.7.4-2 0-4-.3-6-.9-2-.6-3.7-1.6-5.1-3l5.3-5.9c.8 1 1.7 1.8 2.7 2.3 1 .5 2.1.8 3.4.8 1 0 1.9-.1 2.7-.4.8-.3 1.2-.8 1.2-1.6 0-.7-.4-1.3-1.1-1.7-.7-.4-1.6-.7-2.7-.9-1.1-.3-2.3-.5-3.5-.8-1.3-.3-2.4-.7-3.5-1.3-1.1-.6-2-1.4-2.7-2.5-.7-1.1-1.1-2.5-1.1-4.3 0-1.7.3-3.1 1-4.4.7-1.2 1.6-2.2 2.7-3 1.1-.8 2.4-1.4 3.8-1.7 1.4-.4 2.9-.6 4.3-.6 1.9 0 3.7.3 5.6.8 1.9.5 3.5 1.5 4.8 2.9l-5.2 5.3"
+                      />
+                      <path
+                        id="prefix__Fill-41"
+                        class="prefix__st3"
+                        d="M53 38.3l8.5-6.3v7.2h.1c.3-.6.7-1.1 1.2-1.7.5-.6 1.1-1 1.8-1.5.7-.4 1.5-.8 2.4-1.1.9-.3 1.9-.4 2.9-.4 2 0 3.8.4 5.3 1.2 1.6.8 2.7 2.1 3.5 3.9 1-1.8 2.3-3.2 3.7-4 1.5-.8 3.2-1.2 5.4-1.2 1.9 0 3.5.3 4.9 1 1.3.6 2.4 1.5 3.1 2.7.8 1.1 1.3 2.4 1.6 4 .3 1.5.5 3.1.5 4.9v17h-8.8V47.3c0-1.3-.3-2.5-.9-3.5-.6-1-1.6-1.4-3-1.4-1 0-1.9.2-2.6.5-.7.3-1.2.8-1.6 1.4-.4.6-.7 1.3-.9 2.1-.2.8-.3 1.6-.3 2.5V64H71V48.8c0-.5 0-1.1-.1-1.9 0-.7-.2-1.5-.4-2.1-.2-.7-.6-1.2-1.1-1.7-.5-.5-1.3-.7-2.3-.7-1.1 0-2.1.2-2.8.6-.7.4-1.2 1-1.6 1.7-.4.7-.6 1.5-.7 2.3-.1.9-.2 1.8-.2 2.7V64H53V38.3"
+                      />
+                      <path
+                        id="prefix__Fill-42"
+                        class="prefix__st3"
+                        d="M112.1 49c0 2.2.6 3.9 1.9 5.2 1.2 1.3 3 2 5.2 2s4-.7 5.2-2c1.2-1.3 1.8-3.1 1.8-5.2 0-2.2-.6-3.9-1.8-5.2-1.2-1.3-3-2-5.2-2s-4 .7-5.2 2c-1.3 1.3-1.9 3.1-1.9 5.2zM104 18.9l8.8-5.9v24.8h.1c1-1.4 2.3-2.3 3.9-2.9 1.6-.6 3.3-.9 5.1-.9 2 0 3.9.4 5.5 1.3 1.6.8 3 2 4.1 3.4 1.1 1.4 2 3 2.6 4.8.6 1.8.9 3.7.9 5.7 0 2.2-.3 4.1-1 5.9-.7 1.8-1.6 3.4-2.8 4.7-1.2 1.3-2.7 2.3-4.4 3.1-1.7.7-3.6 1.1-5.8 1.1-1 0-2-.1-2.9-.4-.9-.3-1.7-.6-2.5-1.1-.8-.4-1.4-.9-2-1.4-.6-.5-1-1-1.4-1.6h-.1v3.8H104V18.9z"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="mt-4">
+          <h1 class="mb-6 text-3xl font-bold">Welcome!</h1>
+          <div id="api"></div>
+          
+          <p class="mt-6 text-center">
+            Want access? Visit the following link to
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.fsmb.org/PDC/"
+              class="underline"
+              >Learn More</a
+            >
+          </p>
+        </div>
+        <div class="text-center lg:text-left">
+          <p class="mt-12 mb-2 text-sm font-light text-gray-400 lg:mt-0">
+            By logging in, I agree to FSMB&apos;s policies
+          </p>
+          <p>
+            <a
+              class="inline-block mr-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.fsmb.org/PDC/pdc-tos/"
+              >Terms &amp; Conditions</a
+            >
+            |
+            <a
+              class="inline-block ml-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.fsmb.org/about-fsmb/privacy-policy/"
+              >Data Usage &amp; Privacy Policy</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
